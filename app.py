@@ -13,11 +13,9 @@ def hello_world():
 @app.route('/hello/<username>')
 def hello_user(username):
     return 'Why Hello %s!\n' % username
-
+    
 if __name__ == '__main__':
-    # Get the local machine's IP address
-    host_ip = socket.gethostbyname(socket.gethostname())
-    print("Server IP Address:", host_ip)
+    app.run(host='0.0.0.0', port=80) 
 
     # Run the Flask app with the dynamically generated IP address
     app.run(host=host_ip, port=5000)
