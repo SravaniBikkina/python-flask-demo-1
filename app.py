@@ -22,5 +22,5 @@ def hello_user(username):
     return 'Why Hello %s! Host ID: %s\n' % (username, host_id)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0' port=5000)
 
